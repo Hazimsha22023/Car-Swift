@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Car'Swift</title>
+    <link rel="icon" type="image/x-icon" href="/img/icon/icon.png">
+    <link rel="stylesheet" href="css/book.css"
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo">Car'Swift</a>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cars.html">Cars</a></li>
+        <li><a href="zones.html">Zones</a></li>
+        <li><a href="book.html">Book Car</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+</header>
+<div>
+    <center>
+      <video src="video/banner.mp4" height="684" autoplay muted loop></video>
+    </center>
+</div>
+<br>
+<div class="row">
+    <div class="col-75">
+      <div class="container">
+        <form action="/action_page.php" id="checkout-form">
+  
+          <div class="row">
+            <div class="col-50">
+              <h3>Billing Address</h3><br>
+              <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+              <input type="text" id="fname" name="firstname" placeholder="Ex: Hazim Shah">
+              <label for="email"><i class="fa fa-envelope"></i> Email</label>
+              <input type="text" id="email" name="email" placeholder="Ex: hazimshah@ilps.com">
+              <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+              <input type="text" id="adr" name="address" placeholder="Ex: ILP Selandar, Kota Bharu, Johor">
+              <label for="city"><i class="fa fa-institution"></i> City</label>
+              <input type="text" id="city" name="city" placeholder=" Ex: Jasin">
+  
+              <div class="row">
+                <div class="col-50">
+                  <label for="state">State</label>
+                  <input type="text" id="state" name="state" placeholder="NY">
+                </div>
+                <div class="col-50">
+                  <label for="zip">Zip</label>
+                  <input type="text" id="zip" name="zip" placeholder="10001">
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-50">
+              <h3>Payment</h3><br>
+              <label for="fname">Accepted Cards</label>
+              <div class="icon-container">
+                <i class="fa fa-cc-visa" style="color:navy;"></i>
+                <i class="fa fa-cc-amex" style="color:blue;"></i>
+                <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                <i class="fa fa-cc-discover" style="color:orange;"></i>
+              </div>
+              <label for="cname">Name on Card</label>
+              <input type="text" id="cname" name="cardname" placeholder="Ex: John More Doe">
+              <label for="ccnum">Credit card number</label>
+              <input type="text" id="ccnum" name="cardnumber" placeholder="Ex: 1111-2222-3333-4444">
+              <label for="expmonth">Exp Month</label>
+              <input type="text" id="expmonth" name="expmonth" placeholder="Ex: September">
+  
+              <div class="row">
+                <div class="col-50">
+                  <label for="expyear">Exp Year</label>
+                  <input type="text" id="expyear" name="expyear" placeholder="2018">
+                </div>
+                <div class="col-50">
+                  <label for="cvv">CVV</label>
+                  <input type="text" id="cvv" name="cvv" placeholder="352">
+                </div>
+              </div>
+            </div>
+  
+          </div>
+          <label>
+            <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+          </label>
+          <input type="submit" value="Continue to checkout" class="btn">
+        </form>
+      </div>
+    </div>
+  
+    <div class="col-25">
+      <div class="container">
+        <h4>Cart
+          <span class="price" style="color:black">
+            <i class="fa fa-shopping-cart"></i>
+            <b>1</b>
+          </span>
+        </h4><br>
+        <p>Choose Date:<br><input type="date" id="dateInput"></p><br>
+        <p>Choose Car:
+          <select name="cars" id="manualSelect" onchange="calculatePrice()">
+          <option value="BRV">HONDA BR-V</option>
+          <option value="CRV">HONDA CR-V</option>
+          <option value="HRV">HONDA HR-V</option>
+          <option value="AXIA">PERODUA AXIA</option>
+          <option value="BEZZA">PERODUA BEZZA</option>
+          <option value="MYVI">PERODUA MYVI</option>
+          <option value="IRIS">PROTON IRIS</option>
+          <option value="X50">PROTON X50</option>
+          <option value="X70">PROTON X70</option>
+          <option value="INNOVA">TOYOTA INNOVA</option>
+          <option value="RUSH">TOYOTA RUSH</option>
+          <option value="VELLFIRE">TOYOTA VELLFIRE</option>
+          <option value="VIOS">TOYOTA VIOS</option>
+          <option value="WISH">TOYOTA WISH</option>
+          <option value="YARIS">TOYOTA YARIS</option>
+          <option value="PASSAT">VOLKSWAGEN PASSAT</option>
+          <option value="POLO">VOLKSWAGEN POLO</option>
+          <option value="TIGUAN">VOLKSWAGEN TIGUAN</option>
+          <option value="CX5">MAZDA CX-5</option>
+          <option value="TUCSON">HYUNDAI TUCSON</option>
+          <option value="PICANTO">KIA PICANTO</option>
+        </select></p><br>
+        <p>Choose Hours: <input type="number" id="quantityInput" value="1" oninput="updatePrice()"></p>
+        <br>
+        <div class="total-wrapper">
+          <label for="automaticInput" id="automaticInputLabel">Total:</label>
+          <input type="text" id="automaticInput" readonly>
+      </div>
+      </div>
+    </div>
+  </div>
+<br>
+<footer>
+    <div class="footer-content">
+        <h3>Get to Know More About Us</h3>
+        <p>In Another Social Media Platform</p>
+        <ul class="socials">
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="https://twitter.com/CarSwift1803"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0" target="_blank"><i class="fa fa-youtube"></i></a></li>
+        </ul>
+    </div>
+    <div class="footer-bottom">
+        <p>Copyright &copy; Car'Swift Malaysia Sdn Bhd. 2024. All Rights Reserved. Web Design by, <span style="font-family: sans-serif;">Hazim Shah</span></p>
+    </div>
+</footer>
+</body>
+<script src="js/book.js">
+</script>
+</html>

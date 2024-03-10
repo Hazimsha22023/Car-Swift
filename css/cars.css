@@ -1,0 +1,237 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+  body{
+    display: table;
+    justify-content: center;      
+    height: 100vh;
+    background: whitesmoke;
+    align-items: center;
+
+  }
+
+/*header*/
+
+  header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.6s;
+  padding: 40px 100px;
+  z-index: 100000;
+}
+header.sticky{
+  padding: 5px 100px;
+  background: #fff;
+}
+
+header.sticky .logo {
+color: black !important; /* Change the color to black */
+}
+
+header.sticky ul li a {
+color: black !important; /* Change the color to black */
+}
+
+header .logo{
+  position: relative;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: 0.6s;
+}
+header ul{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header ul li{
+  position: relative;
+  list-style: none;
+}
+header ul li a{
+  position: relative;
+  margin: 0 15px;
+  text-decoration: none;
+  color: #fff;
+  letter-spacing: 2px;
+  font-weight: 500px;
+  transform: 0.6s;
+}
+
+/*content*/
+
+.image-container {
+display: flex;
+flex-wrap: wrap;
+justify-content: center; /* Center items horizontally */
+align-items: center; /* Center items vertically */
+backdrop-filter: blur(20px);
+}
+
+.image {
+padding: 5px;
+box-sizing: border-box;
+box-shadow: 5px 5px 20px black;
+overflow: hidden;
+text-align: center;
+margin: 20px; /* Remove margin */
+border-radius: 10px;
+}
+
+.image:hover{
+    cursor: pointer;
+  }
+
+  .image:hover .intro{
+    height: 100px;
+    bottom: 5px;
+    background: black;
+  }
+  .image:hover p{
+    opacity: 1;
+    visibility:visible;
+  }
+  .image:hover img{
+    transform: scale(1.1);
+  }
+
+
+.intro{
+    height: 70px;
+    width: 350px;
+    padding: 6px;
+    box-sizing: border-box;
+    position: relative;
+    background: rgb(27,27,27,.5);
+    color:white;
+    transition: .5s;
+    border-radius: 10px;
+  }
+
+.image img {
+width: 300px; /* Make the image fill the container width */
+height: 500px; /* Maintain aspect ratio */
+max-width: 100%; /* Limit image width to its original size */
+max-height: 200px; /* Set maximum height */
+border-radius: 3px;
+transition: .5s;
+margin: 0; /* Remove margin */
+}
+
+.image p {
+  font-size: 20px;
+margin-top: 10px;
+margin: 0; /* Remove margin */
+}
+
+h1{
+    margin:10px ;
+    font-size: 30px;
+  }
+h2{
+    margin:12px ;
+    font-size: 28px;
+}
+
+h3{
+    margin:13px ;
+    font-size: 27px;
+}
+
+.image-container p{
+    font-size: 20px;
+    margin: 10px;
+    visibility: hidden;
+    opacity: 0;
+  }
+  span{
+    font-weight: bold;
+  }
+
+/* Media Query for 4 images in 1 column */
+
+@media screen and (max-width: 800px) {
+.image {
+  flex: 0 0 50%; /* 2 columns */
+}
+}
+/* footer */
+
+footer{
+  position:relative;
+  bottom: 0;
+  background: #111;
+  height: auto;
+  font-family: "Open Sans";
+  padding-top: 40px;
+  color: #fff;
+}
+.footer-content{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.footer-content h3{
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-transform: capitalize;
+  line-height: 3rem;
+}
+.footer-content p{
+  max-width: 500px;
+  margin: 10px auto;
+  line-height: 28px;
+  font-size: 14px;
+}
+.socials{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0 3rem 0;
+}
+.socials li{
+  margin: 0 10px;
+}
+.socials a{
+  text-decoration: none;
+  color: #fff;
+}
+.socials a i{
+  font-size: 1.1rem;
+  transition: color .4s ease;
+
+}
+.socials a:hover i{
+  color: aqua;
+}
+
+.footer-bottom{
+  background: #000;
+  width: 100vw;
+  padding: 20px 0;
+  text-align: center;
+}
+.footer-bottom p{
+  font-size: 14px;
+  word-spacing: 2px;
+  text-transform: capitalize;
+}
+.footer-bottom span{
+  text-transform: uppercase;
+  opacity: 0.4;
+  font-weight: 200;
+}
